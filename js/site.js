@@ -94,3 +94,7 @@ function scrollToTop() {
 $(function () {
     moveScroller();
 });
+
+
+var a = document.getElementById('projects-here'); 
+a.addEventListener('click', function(){ document.getElementById("projects").scrollIntoView();}, false);
