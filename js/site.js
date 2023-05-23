@@ -83,6 +83,14 @@ function moveScroller() {
     move();
 }
 
+function scrollToAbout() {
+    document.getElementById("about").scrollIntoView();
+}
+
+function scrollToTop() {
+    document.getElementById("top").scrollIntoView();
+}
+
 $(function () {
     moveScroller();
 });
