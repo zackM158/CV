@@ -1,0 +1,644 @@
+html {
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #111111;
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: Arvo;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    width: 100%;
+    margin: 0%;
+    padding: 0;
+    height: 100%;
+}
+
+.home-div {
+    background-image: url('../img/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.profile-title {
+    color: white;
+    font-size: 70px;
+    margin: 0;
+    text-align: center;
+    font-family: Roboto;
+}
+
+.profile-subtitle {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    font-family: Roboto;
+}
+
+.profile-buttons {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-buttons{
+    margin: 0px 20px;
+}
+
+.more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    position: absolute;
+    bottom: 40px;
+}
+
+.profile-description {
+    color: #c4c4c4;
+    margin: 0 0 0 100px;
+    font-size: 25px;
+    text-align: justify;
+    font-family: Roboto;
+}
+
+.profile-skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 100px;
+}
+
+.skill {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin: 0px 20px;
+}
+
+.skill-image {
+    height: 50px;
+}
+
+.skill-text {
+    color: white;
+    text-align: center;
+}
+
+
+
+.about-details {
+    display: inline-block;
+    width: 69%;
+    -ms-transform: translateY(20%);
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+}
+
+.profile-img-div {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    max-width:700px;
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+
+
+.profile-div {
+    position: relative;
+    flex-flow: column;
+}
+
+.top-skills {
+    margin: 100px 0 20px 100px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.section-title {
+    color: #f5b391;
+    text-align: center;
+    padding: 0px 48px;
+    display: inline-block;
+    font-family: Arvo;
+}
+
+.section { 
+    margin:50px 0px;
+    padding: 0px;
+    background-image: url('../img/aboutBackground.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding: 10px 100px 50px 100px;
+}
+
+/*Timeline*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Timeline Container */
+.timeline {
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 29%;
+    display: inline-block;
+    float: right;
+    z-index:50;
+}
+
+/* Card container */
+.card {
+    position: relative;
+    z-index: 100;
+}
+
+
+    /* setting padding based on even or odd */
+    .card:nth-child(odd) {
+        padding: 30px 0 30px 30px;
+    }
+
+    .card:nth-child(even) {
+        padding: 30px 30px 30px 0;
+    }
+    /* Global ::before */
+    .card::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        border: solid #342965;
+    }
+
+    /* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+@media only screen and (max-width: 400px) {
+    .card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+    }
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+    color: gray;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Roboto;
+}
+
+/* Title of the card */
+.title {
+    color: #f5b391;
+    position: relative;
+}
+
+    /* Timeline dot  */
+    .title::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 999px;
+        border: 3px solid #342965;
+    }
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .title {
+    text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title::before {
+    left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title::before {
+    right: -45px;
+}
+
+/*Timeline*/
+
+.projectpanel {
+    height: 100%;
+    z-index: 150;
+    display: none;
+    background-color: #1E1E1E;
+    position: relative;
+    flex-flow: column;
+    border-radius: 0 80px 80px 0;
+} 
+
+#scroller {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0px;
+    width: calc(70% - 100px);
+    display: inline-block;
+    margin-top:10px;
+    height: calc(80vh - 0px);
+    padding: 75px 0px;
+    background-image: url('../img/aboutBackground.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+#projectpanel1 {
+    display: flex;
+}
+
+.projects-section {
+    margin: 50px 0px;
+    padding: 0px;
+
+    padding: 10px 0 50px 0px;
+}
+
+.timeline-image {
+    height: 100%; 
+   object-fit: contain;
+}
+
+#fakebook-img {
+    height: 300px;
+}
+
+.project-title {
+    color: #F5B391;
+    text-align: center;
+    padding-top:20px;
+    display: block;
+    font-family: Arvo;
+}
+.project-description {
+    display: block;
+    text-align: justify;
+    font-size: 22px;
+    font-family: Roboto;
+}
+
+.project-img-holder {
+    width: 80%;
+    flex: 1 1 auto;
+    display: flex;
+    position: relative;
+}
+
+.project-img {
+    height: 100%;
+    width:100%;
+    object-fit: contain;
+    object-position: bottom left;
+    position: absolute;
+    bottom: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-header{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+
+.left-line {
+    margin: 0 0 0 200px;
+    flex: 1;
+    border: 1px solid #f5b391;
+}
+
+.right-line {
+    margin: 0 200px 0 0;
+    flex: 1;
+    border: 1px solid #f5b391;
+}
+
+.project-description {
+    color: #c4c4c4;
+    margin: 20px;
+}
+
+.project-buttons {
+    margin-right: 20px;
+    position: absolute;
+    bottom: 20px;
+    right:20px;
+
+}
+.project-button {
+    display: block;
+    margin-top: 20px;
+}
+.project-button-img {
+    width:80px;
+    height:80px;
+}
+
+.top-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-img {
+    object-position: center;
+    object-fit: contain;
+    width: 100%;
+    height: 80px;
+}
+
+.skill-row{
+    display:flex; 
+    margin:0px;
+    padding:0px;
+}
+
+@media only screen and (max-width: 1700px) {
+    .about-details {
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .section-title {
+        padding: 0px 28px;
+        display: block;
+    }
+
+    .left-line {
+        margin: 0 0px 10px 0px;
+    }
+
+    .right-line {
+        margin: 10px 0px 0 0px;
+    }
+
+    .section {
+        margin: 20px 0px;
+        padding: 0px;
+        background-image: none;
+        padding: 0px 20px 0px 20px;
+    }    
+    .projects-section {
+        padding: 0px;
+        padding: 0;
+        margin: 0;
+        margin: 20px 0px;
+        padding: 10px 0 50px 0px;
+    }
+
+
+    .profile-div {
+        position: relative;
+        flex-flow: row;
+        width: 100%;
+    }
+
+    .profile-img-div {
+        display: block;
+        vertical-align: top;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        max-width: 900px;
+    }
+
+    .profile-img {
+        width: 80%;
+    }
+
+    .about-details {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+
+    .profile-description {
+        color: #c4c4c4;
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .profile-skills {
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skill-row {
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top-skills {
+        margin: 50px 0 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .skill {
+        margin: 0px 10px;
+    }
+
+    .section-header {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+
+    #scroller {
+        margin-top: 0px;
+        background-image: none;
+        position: fixed;
+        width: 100%;
+        display: block;
+        height: 100%;
+        padding: 0;
+        z-index: 200;
+    }
+
+
+    .projectpanel {
+        width: 95%;
+        height: 85vh;
+        margin-top: 7.5vh;
+    }
+
+    #projects-header {
+        margin: 20px 0px;
+        padding: 0px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .timeline {
+        width: 90%;
+        display: block;
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .project-buttons {
+        margin: 0px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 20px;
+        right: 0px;
+    }
+
+
+    .project-button {
+        display: block;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+        z-index: 300;
+    }
+
+    .project-button-img {
+        height:50px;
+        width:50px;
+    }
+
+
+    .project-img-holder {
+        width: 100%;
+    }
+
+    .project-img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+
+    #projectpanel1 {
+        display: none;
+    }
+
+    .project-title {
+        font-size:20px;
+    }
+
+    #project-img1{
+        margin-bottom:65px;
+    }
+}
