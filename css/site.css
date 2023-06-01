@@ -127,9 +127,9 @@ body {
 .about-details {
     display: inline-block;
     width: 69%;
-    -ms-transform: translateY(20%);
-    -webkit-transform: translateY(20%);
-    transform: translateY(20%);
+    -ms-transform: translateY(10%);
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%);
 }
 
 .profile-img-div {
