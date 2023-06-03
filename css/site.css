@@ -127,9 +127,6 @@ body {
 .about-details {
     display: inline-block;
     width: 69%;
-    -ms-transform: translateY(10%);
-    -webkit-transform: translateY(10%);
-    transform: translateY(10%);
 }
 
 .profile-img-div {
@@ -451,16 +448,8 @@ a {
     padding:0px;
 }
 
-@media only screen and (max-width: 1700px) {
-    .about-details {
-        -ms-transform: none;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
 
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .section-title {
         padding: 0px 28px;
         display: block;

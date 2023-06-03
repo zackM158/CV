@@ -8,23 +8,43 @@ const timeline = document.getElementById("timeline-holder");
 var canhide = true;
 
 
-async function showproject(projectobject) {
+async function showprojecthover(projectobject) {
     var projectid = projectobject.id;
 
-    if (window.innerWidth <= 900) {
-        if (!canhide) {
-            return;
-        }
-        canhide = false;
-        await delay(100);
-        scroller.style.display = "block";
+    if (window.innerWidth <= 1000 || !canhide) 
+    {
+        return;
+    }
+      
+    scroller.style.display = "inline-block";
+    timeline.style.filter = "none";
 
-        timeline.style.filter = "blur(8px)";
+    for (const p of projects) {
+        if (p.id == projectid) {
+            p.style.display = "flex";
+        }
+        else {
+            p.style.display = "none";
+
+        }
     }
-    else {
-        scroller.style.display = "inline-block";
-        timeline.style.filter = "none";
+
+    await delay(100);
+    canhide = true;
+}
+
+async function showprojectclick(projectobject) {
+    var projectid = projectobject.id;
+
+    if (window.innerWidth > 1000 || !canhide) 
+    {
+        return;
     }
+    
+    canhide = false;
+    await delay(100);
+    scroller.style.display = "block";
+    timeline.style.filter = "blur(8px)";
 
     for (const p of projects) {
         if (p.id == projectid) {
@@ -47,7 +67,7 @@ function delay(milliseconds) {
 }
 
 async function hideScoller() {
-    if (window.innerWidth <= 900)
+    if (window.innerWidth <= 1000)
     {
         if (!canhide)
         {
