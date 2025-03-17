@@ -11,7 +11,7 @@ var canhide = true;
 async function showprojecthover(projectobject) {
     var projectid = projectobject.id;
 
-    if (window.innerWidth <= 1000 || !canhide) 
+    if (window.innerWidth <= 1300 || !canhide) 
     {
         return;
     }
@@ -36,7 +36,7 @@ async function showprojecthover(projectobject) {
 async function showprojectclick(projectobject) {
     var projectid = projectobject.id;
 
-    if (window.innerWidth > 1000 || !canhide) 
+    if (window.innerWidth > 1300 || !canhide) 
     {
         return;
     }
@@ -67,7 +67,7 @@ function delay(milliseconds) {
 }
 
 async function hideScoller() {
-    if (window.innerWidth <= 1000)
+    if (window.innerWidth <= 1300)
     {
         if (!canhide)
         {
